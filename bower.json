@@ -4,8 +4,7 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "d3": "^4.5.0",
-    "snap-svg": "*"
+    "d3": "^4.5.0"
   },
   "overrides": {
     "bootstrap-sass": {
