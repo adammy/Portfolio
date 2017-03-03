@@ -2,10 +2,10 @@
   "name": "project-one-portfolio",
   "private": true,
   "dependencies": {
+		"animate.css": "^3.5.2",
     "bootstrap-sass": "~3.3.5",
     "d3": "^4.7.1",
-    "animate.css": "^3.5.2",
-    "modernizr": "^3.3.1"
+    "modernizr": "~2.8.3"
   },
   "overrides": {
     "bootstrap-sass": {
