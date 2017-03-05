@@ -37,13 +37,25 @@ body {
 	color: #595959;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size: 18px;
+	@media (max-width: $md) {
+		font-size: 16px;
+	}
+	@media (max-width: $sm) {
+		font-size: 15px;
+	}
 }
 h1 {
 	font-size: 4.4em;
 	font-weight: 700;
+	@media (max-width: $sm) {
+		font-size: 3em;
+	}
 }
 h2 {
 	font-size: 2.2em;
+	@media (max-width: $sm) {
+		font-size: 1.6em;
+	}
 }
 h3 {
 	font-size: 2em;
@@ -133,6 +145,9 @@ img {
 }
 .section {
 	padding: 4em 4em 5em;
+	@media (max-width: $sm) {
+		padding: 3em 2em 4em;
+	}
 }
 .flex {
 	display: flex;
@@ -145,15 +160,20 @@ img {
 }
 
 header {
-	padding: 13.5em 4em 0;
-	min-height: 38em;
+	padding: 13.5em 4em;
+	@media (max-width: $sm) {
+		padding: 4em 2em 6em;
+	}
 }
 
 #work {
-	min-height: 120em;
+
 }
 .work-item {
 	margin: 0 0 12em;
+	@media (max-width: $md) {
+		margin: 0 0 5em;
+	}
 }
 .devices {
 	position: relative;
@@ -165,6 +185,12 @@ header {
 	}
 	&-left {
 		margin-right: 3em;
+	}
+	@media (max-width: $md) {
+		margin: 4em 0 0;
+	}
+	@media (max-width: $sm) {
+		margin: 2em 0 0;
 	}
 	ul {
 		&.skills {
@@ -186,6 +212,14 @@ header {
 	border: 1px solid $gray;
 	border-radius: 0.25em;
 	width: 85%;
+	@media (max-width: $sm) {
+		width: 100%;
+	}
+	&.pull-right {
+		@media (max-width: $md) {
+			float: none !important;
+		}
+	}
 	img {
 		border-bottom-left-radius: 0.25em;
 		border-bottom-right-radius: 0.25em;
@@ -236,6 +270,9 @@ header {
 	border: 1px solid $gray;
 	border-radius: 1em;
 	width: 28%;
+	@media (max-width: $sm) {
+		display: none;
+	}
 	.camera {
 		background: $gray;
 		margin: 1em auto 0.75em;
@@ -268,6 +305,10 @@ header {
 	top: 0;
 	&-left {
 		left: 0;
+		@media (max-width: $md) {
+			left: auto;
+			right: 0;
+		}
 	}
 	&-right {
 		right: 0;
