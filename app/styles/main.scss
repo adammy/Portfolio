@@ -67,25 +67,22 @@ h3 {
 	&:after {
 		content: '\00a0';
 		text-align: center;
-		margin: 1em auto 0;
+		margin: 1em 0 0;
 		border-bottom: 2px solid $light-gray;
 		width: 4em;
 		height: 0;
 		display: block;
+	}
+	&.text-center {
+		&:after {
+			margin: 1em auto 0;
+		}
 	}
 }
 h4 {
 	font-size: 1.8em;
 	line-height: 1.3em;
 	margin-bottom: 0.75em;
-	&:after {
-		content: '\00a0';
-		margin: 1em 0 0;
-		border-bottom: 2px solid $light-gray;
-		width: 2em;
-		height: 0;
-		display: block;
-	}
 }
 h1, h2, h3 {
 	color: $primary;
@@ -132,7 +129,12 @@ img {
 	&-down {
 	  border-left: 50px solid transparent;
 	  border-right: 50px solid transparent;
-	  border-top: 50px solid $primary;
+	}
+	&-primary {
+		border-top: 50px solid $primary;
+	}
+	&-white {
+		border-top: 50px solid #fff;
 	}
 }
 
@@ -144,9 +146,15 @@ img {
 	}
 }
 .section {
-	padding: 4em 4em 5em;
+	padding: 4em 4em 7em;
 	@media (max-width: $sm) {
 		padding: 3em 2em 4em;
+	}
+	&-arrow {
+		padding-top: 0;
+		.arrow {
+			margin-bottom: 4em;
+		}
 	}
 }
 .flex {
@@ -156,7 +164,7 @@ img {
 #wrapper {
 	background: #fff;
 	max-width: 1600px;
-	margin: 0 auto;
+	margin: 0 auto 10em;
 }
 
 header {
@@ -173,6 +181,9 @@ header {
 	margin: 0 0 12em;
 	@media (max-width: $md) {
 		margin: 0 0 5em;
+	}
+	&:last-child {
+		margin-bottom: 4em;
 	}
 }
 .devices {
@@ -212,6 +223,7 @@ header {
 	border: 1px solid $gray;
 	border-radius: 0.25em;
 	width: 85%;
+	overflow: hidden;
 	@media (max-width: $sm) {
 		width: 100%;
 	}
