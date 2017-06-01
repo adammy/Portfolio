@@ -4,6 +4,10 @@ $secondary: #53e3a6;
 $gray: #999;
 $light-gray: #e7e7e7;
 
+$browser-red: #fd605b;
+$browser-yellow: #febe3c;
+$browser-green: #36cd4a;
+
 // breakpoints
 $md: 992px;
 $sm: 768px;
@@ -91,6 +95,11 @@ img {
 }
 video {
 	display: block;
+	//opacity: 0.8;
+	//transition: 0.2s ease all;
+	&:hover {
+		//opacity: 1;
+	}
 }
 .btn-container {
 	margin-top: 2em;
@@ -141,12 +150,6 @@ video {
 	@media (max-width: $sm) {
 		padding: 3em 2em 4em;
 	}
-	&-arrow {
-		padding-top: 0;
-		.arrow {
-			margin-bottom: 4em;
-		}
-	}
 }
 .flex {
 	display: flex;
@@ -195,13 +198,20 @@ header {
 
 // portfolio/work
 #work {
-
+	padding-right: 0;
+	padding-left: 0;
 }
 #work-slider {
 	.slide {
-		margin: 0 0 12em;
+		margin: 0 0 3em;
+		padding-right: 4em;
+		padding-left: 4em;
 		@media (max-width: $md) {
 			margin: 0 0 5em;
+		}
+		@media (max-width: $sm) {
+			padding-right: 2em;
+			padding-left: 2em;
 		}
 	}
 }
@@ -267,6 +277,15 @@ header {
 				width: 0.5em;
 				height: 0.5em;
 				float: left;
+				&:nth-child(1) {
+					background: $browser-red;
+				}
+				&:nth-child(2) {
+					background: $browser-yellow;
+				}
+				&:nth-child(3) {
+					background: $browser-green;
+				}
 			}
 		}
 		.address {
