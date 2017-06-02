@@ -18,7 +18,6 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
-@import "bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
 // fonts
@@ -197,14 +196,20 @@ header {
 
 // portfolio/work
 #work {
-	padding-right: 0;
-	padding-left: 0;
+	.item {
+		margin-bottom: 11.5em;
+		&:last-child {
+			margin-bottom: 5em;
+		}
+		@media (max-width: $md) {
+			margin: 0 0 5em;
+		}
+	}
 }
 #work-slider {
 	.slide {
 		margin: 0 0 3em;
-		padding-right: 4em;
-		padding-left: 4em;
+		margin-bottom: 13em; // thing
 		@media (max-width: $md) {
 			margin: 0 0 5em;
 		}
