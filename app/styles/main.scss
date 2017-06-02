@@ -197,7 +197,11 @@ header {
 // portfolio/work
 #work {
 	.item {
+		opacity: 0;
 		margin-bottom: 11.5em;
+		&.animated {
+			opacity: 1;
+		}
 		&:last-child {
 			margin-bottom: 5em;
 		}
@@ -491,4 +495,9 @@ footer {
 	&-slide {
 		outline: none;
 	}
+}
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }

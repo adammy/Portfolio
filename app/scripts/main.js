@@ -3,10 +3,12 @@
   'use strict';
 
 	$('#work .item').waypoint(function (direction) {
-		let workItem = $(this)[0].element.attributes['data-item'].nodeValue;
-		$(`#work .item[data-item=${workItem}]`).find('.typer').addClass('typing');
+		let workItem = $(this)[0].element.attributes['data-item'].nodeValue,
+				workItemEl = $(`#work .item[data-item=${workItem}]`);
+		workItemEl.addClass('animated fadeInUp');
+		workItemEl.find('.typer').addClass('typing');
 	}, {
-		offset: 180
+		offset: 300
 	});
 
 	$('video').on('mouseenter', function () {
