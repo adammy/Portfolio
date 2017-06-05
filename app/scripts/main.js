@@ -8,7 +8,7 @@
 		workItemEl.addClass('animated fadeInUp');
 		workItemEl.find('.typer').addClass('typing');
 	}, {
-		offset: 300
+		offset: 500
 	});
 
 	$('video').on('mouseenter', function () {
